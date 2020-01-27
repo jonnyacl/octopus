@@ -10,7 +10,7 @@ const Item = ({id, item, description, detail, specs, perfData, price}) => {
   return (
     <div className="App-item">
         <div className="image">
-          <img src={bulb}></img>
+          <img src={bulb} alt="bulb"></img>
         </div>
         <div className="title">
           {item}

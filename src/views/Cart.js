@@ -8,7 +8,6 @@ const Cart = ({itemId, item, price, currency}) => {
   const [basketState, dispatch] = useContext(BasketContext);
   const basketItem = basketState[itemId];
 
-  console.log(`Existing item ${JSON.stringify(basketItem)}`);
   const [count, setCount] = useState(1);
   const [showCart, setShowCart] = useState(false);
 
@@ -30,6 +29,7 @@ const Cart = ({itemId, item, price, currency}) => {
   if (priceParts.length === 2) {
     pence = priceParts[1];
   }
+
   return (
     <div className="App-item-cart">
       <div className="pricerow">
@@ -42,7 +42,7 @@ const Cart = ({itemId, item, price, currency}) => {
         />
       </div>
       <CartButton onClick={() => handleAddToCart()}/>
-      {showCart ?
+      {basketItem && showCart ?
         <div>
           <div>Cart: Count: {basketItem.count} Price: {basketItem.currency}{basketItem.price}</div>
           <button className="emptyCart" onClick={() => {dispatch({type: "REMOVE_FROM_BASKET", itemId })}}>Empty Cart</button>

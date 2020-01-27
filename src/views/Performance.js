@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, XAxis, Tooltip, CartesianGrid, Line, Legend, YAxis } from 'recharts';
+import { LineChart, XAxis, Tooltip, Line, YAxis } from 'recharts';
 
 const Performance = ({data}) => {
 
@@ -17,7 +17,7 @@ const Performance = ({data}) => {
         >
           <XAxis dataKey="temp" />
           <YAxis />
-          <Tooltip contentStyle={{"background-color": "#040E29" }}/>
+          <Tooltip contentStyle={{"backgroundColor": "#040E29" }}/>
           <Line type="monotone" dataKey="7w" dot={false} stroke="#FF0074" activeDot={{ r: 8 }} />
           <Line type="monotone" dataKey="11w" dot={false} stroke="white" />
           </LineChart>

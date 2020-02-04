@@ -57,8 +57,7 @@ const App = () => {
           }}
           price={12.99}
           perfData={performanceData}
-        >
-        </Item>
+        />
         <Footer />
       </div>
     </BasketContext.Provider>
